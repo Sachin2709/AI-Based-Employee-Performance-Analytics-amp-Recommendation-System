@@ -53,7 +53,7 @@ Provide the response in the following structured Markdown format:
         headers: {
           'Authorization': `Bearer ${openrouterApiKey}`,
           'Content-Type': 'application/json',
-          'HTTP-Referer': process.env.CLIENT_URL || 'http://localhost:5173',
+          'HTTP-Referer': process.env.CLIENT_URL || 'https://ai-based-employee-performance-analytics-cesd.onrender.com',
           'X-Title': 'Employee Analytics App',
         },
       }
