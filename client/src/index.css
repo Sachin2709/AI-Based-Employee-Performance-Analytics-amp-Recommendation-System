@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-[#030712] text-slate-200 antialiased selection:bg-indigo-500/30;
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  @apply bg-white/[0.03] backdrop-blur-xl border border-white/10 shadow-2xl;
+}
+.glass-input {
+  @apply bg-white/5 border border-white/10 text-white placeholder-slate-400 focus:bg-white/10 focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/50 transition-all rounded-xl px-4 py-3 outline-none;
+}
+.glass-button {
+  @apply relative overflow-hidden bg-white/5 border border-white/10 hover:bg-white/10 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 hover:shadow-[0_0_20px_rgba(99,102,241,0.3)] hover:-translate-y-0.5;
+}
+.gradient-text {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400;
+}
